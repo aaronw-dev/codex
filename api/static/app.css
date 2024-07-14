@@ -1,0 +1,61 @@
+section {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-family: Rowdies;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.path_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 100%;
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    font-family: Roboto;
+}
+
+.path_card {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f0f0f;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+    color: white;
+}
+
+.path_card .card_image {
+    margin-bottom: auto;
+    height: 95px;
+}
+
+.path_card .card_name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.path_card .card_difficulty {
+    font-size: 15px;
+    font-weight: 400;
+}
