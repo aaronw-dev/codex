@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import json
 import os
-app = Flask(__name__, static_url_path='', static_folder="./static")
+app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 creds_dict = json.loads(os.environ.get(
