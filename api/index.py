@@ -16,7 +16,7 @@ db = firestore.client()
 
 
 def getHeader():
-    with open("/api/header.html", "r")as file:
+    with open("api/header.html", "r")as file:
         return file.read()
 
 
