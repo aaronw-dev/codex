@@ -31,7 +31,7 @@ def onboarding():
 
 
 @app.route('/app')
-def app():
+def renderApp():
     return render_template("app.html", header=getHeader())
 
 
