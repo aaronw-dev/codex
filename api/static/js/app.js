@@ -8,5 +8,6 @@ async function init() {
         .then(data => data.json())
         .then(json => courseInfo = json)
     console.lot(courseInfo)
+    courseTitle.innerHTML = courseInfo.name
 }
 init()
