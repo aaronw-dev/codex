@@ -47,14 +47,14 @@ async function openLesson() {
 
         componentContainer.appendChild(componentDiv);
     });
-
-    let index = 1;
-    await componentContainer.children.childNodes.forEach(element => {
-        element.querySelector(".component_continue").addEventListener("click", (e) => {
-            smoothScroll(componentContainer.children[index])
-        })
-        index++;
-    })
+    /*
+        let index = 1;
+        await componentContainer.children.childNodes.forEach(element => {
+            element.querySelector(".component_continue").addEventListener("click", (e) => {
+                smoothScroll(componentContainer.children[index])
+            })
+            index++;
+        })*/
     lessonPanel.style.top = "0px"
     lessonPanel.style.zIndex = 100;
 }
