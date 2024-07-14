@@ -37,12 +37,41 @@
 </head>
 
 <body>
-    <section id="course_main">
-        <h1 class="section-title" id="course-title">Title</h1>
-        <div class="course_float">
+    <section id="course_main" class="open">
+        <h1 class="section-title" id="course-title">Loading...</h1>
+        <div class="course_float" onclick="openLesson()">
             <img src="../static/icons/languages/python.svg">
             <span class="course-lesson">Lesson 1</span>
             <span class="course-topic">Variables</span>
+        </div>
+    </section>
+    <section id="lesson">
+        <h1 class="section-title" id="component-title">Loading...</h1>
+        <div class="component-container">
+            <div class="component">
+                <div class="component-content">
+                    <span id="component-question">Lorem Ipsum?</span>
+                    <p id="component-paragraph">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore enim aspernatur, esse porro
+                        voluptatem dignissimos maiores et eius provident obcaecati vitae quis deleniti fugit voluptas
+                        debitis
+                        nesciunt at recusandae cum.
+                    </p>
+                </div>
+                <button class="component_continue">Continue</button>
+            </div>
+            <div class="component">
+                <div class="component-content">
+                    <span id="component-question">Lorem Ipsum?</span>
+                    <p id="component-paragraph">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore enim aspernatur, esse porro
+                        voluptatem dignissimos maiores et eius provident obcaecati vitae quis deleniti fugit voluptas
+                        debitis
+                        nesciunt at recusandae cum.
+                    </p>
+                </div>
+                <button class="component_continue">Continue</button>
+            </div>
         </div>
     </section>
     <script src="../static/js/app.js"></script>
