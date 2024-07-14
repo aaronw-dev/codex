@@ -43,8 +43,3 @@ def courses():
     for doc in db.collection("courses").get():
         courses.append(doc.to_dict())
     return {"lessons": courses}
-
-
-@app.route('/about')
-def about():
-    return 'About'
