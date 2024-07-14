@@ -21,9 +21,8 @@ init()
 
 const lessonPanel = document.getElementById("lesson")
 async function openLesson() {
-    let index = 0;
     document.getElementById("component-title").innerHTML = courseInfo.name
-    courseInfo.lessons.forEach(element => {
+    courseInfo.lessons.slice(0, -1).forEach(element => {
         const componentDiv = document.createElement('div');
         componentDiv.className = 'component';
         const contentDiv = document.createElement('div');
@@ -44,14 +43,19 @@ async function openLesson() {
         const continueButton = document.createElement('button');
         continueButton.className = 'component_continue';
         continueButton.textContent = 'Continue';
-        continueButton.addEventListener("click", (e) => {
-            smoothScroll(componentContainer.children[index + 1])
-        })
         componentDiv.appendChild(continueButton);
 
         componentContainer.appendChild(componentDiv);
         index++;
     });
+
+    let index = 1;
+    componentContainer.children.forEach(element => {
+        element.querySelector(".component_continue").addEventListener("click", (e) => {
+            smoothScroll(componentContainer.children[index])
+        })
+        index++;
+    })
     lessonPanel.style.top = "0px"
     lessonPanel.style.zIndex = 100;
 }
