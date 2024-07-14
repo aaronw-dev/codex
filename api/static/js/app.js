@@ -29,12 +29,12 @@ async function openLesson() {
 
         const questionSpan = document.createElement('span');
         questionSpan.id = 'component-question';
-        questionSpan.textContent = lesson.name;
+        questionSpan.textContent = element.name;
         contentDiv.appendChild(questionSpan);
 
         const paragraphP = document.createElement('p');
         paragraphP.id = 'component-paragraph';
-        paragraphP.textContent = lesson.content;
+        paragraphP.textContent = element.content;
         contentDiv.appendChild(paragraphP);
 
         componentDiv.appendChild(contentDiv);
