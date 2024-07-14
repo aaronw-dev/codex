@@ -49,7 +49,7 @@ async function openLesson() {
     });
 
     let index = 1;
-    componentContainer.children.forEach(element => {
+    componentContainer.children.childNodes(element => {
         element.querySelector(".component_continue").addEventListener("click", (e) => {
             smoothScroll(componentContainer.children[index])
         })
