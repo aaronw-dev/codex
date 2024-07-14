@@ -38,11 +38,11 @@ def lesson(course, index):
 
 
 @app.route('/courses/')
-def lesson():
-    lessons = []
+def courses():
+    courses = []
     for doc in db.collection("courses").get():
-        lessons.append(doc.to_dict())
-    return {"lessons": lessons}
+        courses.append(doc.to_dict())
+    return {"lessons": courses}
 
 
 @app.route('/about')
