@@ -50,6 +50,16 @@
         </button>
         <span>*CodeX is a progressive web app, meaning it must be installed on your device.</span>
     </div>
+    <script>
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            if (localStorage.getItem("setup") == true) {
+                location.href = "/app"
+            } else {
+                location.href = "/onboarding"
+            }
+
+        }  
+    </script>
 </body>
 
 </html>
