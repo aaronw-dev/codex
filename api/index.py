@@ -15,26 +15,14 @@ firebase_app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
-def getHeader():
-    with open("api/header.html", "r")as file:
-        return file.read()
-
-
 @app.route('/')
 def home():
-    print(os.listdir("api"))
-    return render_template("index.html", header=getHeader())
+    return render_template("index.html")
 
 
 @app.route('/onboarding')
 def onboarding():
-    return render_template("onboarding.html", header=getHeader())
-
-
-@app.route('/app')
-def renderApp():
-
-    return render_template("app.html", header=getHeader())
+    return render_template("onboarding.html")
 
 
 @app.route('/courses/<course>/<index>')
@@ -55,3 +43,8 @@ def courses():
     for doc in db.collection("courses").get():
         courses.append(doc.to_dict())
     return {"lessons": courses}
+
+
+@app.route('/about')
+def about():
+    return 'About'
