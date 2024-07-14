@@ -22,7 +22,7 @@ init()
 const lessonPanel = document.getElementById("lesson")
 async function openLesson() {
     document.getElementById("component-title").innerHTML = courseInfo.name
-    courseInfo.lessons.slice(0, -1).forEach(element => {
+    await courseInfo.lessons.slice(0, -1).forEach(element => {
         const componentDiv = document.createElement('div');
         componentDiv.className = 'component';
         const contentDiv = document.createElement('div');
@@ -49,7 +49,7 @@ async function openLesson() {
     });
 
     let index = 1;
-    componentContainer.children.childNodes.forEach(element => {
+    await componentContainer.children.childNodes.forEach(element => {
         element.querySelector(".component_continue").addEventListener("click", (e) => {
             smoothScroll(componentContainer.children[index])
         })
