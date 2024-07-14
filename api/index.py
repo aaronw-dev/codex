@@ -22,6 +22,7 @@ def getHeader():
 
 @app.route('/')
 def home():
+    print(os.listdir())
     return render_template("index.html", header=getHeader())
 
 
@@ -32,6 +33,7 @@ def onboarding():
 
 @app.route('/app')
 def renderApp():
+
     return render_template("app.html", header=getHeader())
 
 
