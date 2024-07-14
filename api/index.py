@@ -16,7 +16,7 @@ db = firestore.client()
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return db.collection("courses").document("python-1").get().to_dict()
 
 
 @app.route('/about')
