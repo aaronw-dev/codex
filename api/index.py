@@ -10,8 +10,7 @@ creds_dict = json.loads(os.environ.get(
     ("FIREBASE_SERVICE_ACCOUNT_CREDENTIAL")))
 cred = credentials.Certificate(creds_dict)
 
-app = firebase_admin.initialize_app(cred)
-
+firebase_app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
