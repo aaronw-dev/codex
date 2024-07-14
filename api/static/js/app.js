@@ -42,6 +42,9 @@ async function openLesson() {
         const continueButton = document.createElement('button');
         continueButton.className = 'component_continue';
         continueButton.textContent = 'Continue';
+        continueButton.addEventListener("click", (e) => {
+            smoothScroll(componentContainer.children[index + 1])
+        })
         componentDiv.appendChild(continueButton);
 
         componentContainer.appendChild(componentDiv);
