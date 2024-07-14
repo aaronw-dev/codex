@@ -22,7 +22,7 @@ def getHeader():
 
 @app.route('/')
 def home():
-    print(os.listdir("/api"))
+    print(os.listdir("api"))
     return render_template("index.html", header=getHeader())
 
 
