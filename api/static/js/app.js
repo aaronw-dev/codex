@@ -1,8 +1,8 @@
 if (localStorage.getItem("setup") == null) {
     location.href = "/onboarding"
 }
-function smoothScroll(selector) {
-    document.querySelector(selector).scrollIntoView({
+function smoothScroll(element) {
+    element.scrollIntoView({
         behavior: 'smooth'
     });
 }
