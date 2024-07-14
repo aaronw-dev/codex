@@ -23,7 +23,8 @@ def home():
 
 @app.route('/courses/<course>/<index>')
 def lesson(course, index):
-    return db.collection("courses").document(course).collection(f"lesson-{index}").get()
+    course_info = db.collection("courses").document(course).get().to_dict()
+    return course_info
 
 
 @app.route('/about')

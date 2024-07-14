@@ -76,6 +76,7 @@ p {
     box-sizing: border-box;
     padding: 10px;
     gap: 25px;
+    width: 100%;
 }
 
 .download-info button {
