@@ -17,8 +17,12 @@ db = firestore.client()
 
 @app.route('/')
 def home():
-    # print(db.collection("courses").document("python-1").get().to_dict())
     return render_template("index.html")
+
+
+@app.route('/onboarding')
+def onboarding():
+    return render_template("onboarding.html")
 
 
 @app.route('/courses/<course>/<index>')
@@ -31,6 +35,14 @@ def lesson(course, index):
     course_info["lessons"] = collection_array
     print(course_info)
     return course_info
+
+
+@app.route('/courses/')
+def lesson():
+    lessons = []
+    for doc in db.collection("courses").get():
+        lessons.append(doc.to_dict())
+    return {"lessons": lessons}
 
 
 @app.route('/about')
