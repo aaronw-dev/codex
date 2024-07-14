@@ -5,6 +5,6 @@ pathCards.forEach(element => {
         localStorage.setItem("selected_lang", element.getAttribute("lang"))
         localStorage.setItem("setup", true)
         location.href = "/app";
-        //location.reload()
+        console.log('bro?')
     })
 });
