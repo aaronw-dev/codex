@@ -21,9 +21,9 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/course/lessons/<index>')
-def lesson(index):
-    return db.collection("courses").document("python-1").get().to_dict()
+@app.route('/courses/<course>/<index>')
+def lesson(course, index):
+    return db.collection("courses").document(course).collection(f"lesson-{index}").get().to_dict()
 
 
 @app.route('/about')
