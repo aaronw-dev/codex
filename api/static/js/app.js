@@ -7,7 +7,7 @@ async function init() {
     await fetch(`/courses/${localStorage.getItem("selected_lang")}/1`)
         .then(data => data.json())
         .then(json => courseInfo = json)
-    console.lot(courseInfo)
+    console.log(courseInfo)
     courseTitle.innerHTML = courseInfo.name
 }
 init()
