@@ -59,3 +59,14 @@ section {
     font-size: 15px;
     font-weight: 400;
 }
+
+.course_float {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    aspect-ratio: 1;
+
+    background-color: #CD7F32;
+}
