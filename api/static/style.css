@@ -1,0 +1,92 @@
+html,
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Rowdies;
+    src: url(../static/Rowdies/Rowdies-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Rowdies;
+    src: url(../static/Rowdies/Rowdies-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Rowdies;
+    src: url(../static/Rowdies/Rowdies-Light.ttf);
+    font-weight: light;
+}
+
+:root {
+    --bg: #E3D69682;
+    --text: #14120B;
+    --primary: #FFD500;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+* {
+    font-family: Rowdies;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.floater {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text {
+    font-size: 40px;
+}
+
+.floater-main {
+    font-size: 95px;
+}
+
+.welcome-x {
+    color: #DEC859;
+}
+
+.download-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 25px;
+}
+
+.download-info button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 20px;
+}
+
+.download-info span {
+    text-align: center;
+    font-size: 18px;
+}

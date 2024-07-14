@@ -6,6 +6,7 @@ import json
 import os
 app = Flask(__name__)
 app.url_map.strict_slashes = False
+
 creds_dict = json.loads(os.environ.get(
     ("FIREBASE_SERVICE_ACCOUNT_CREDENTIAL")))
 cred = credentials.Certificate(creds_dict)
@@ -16,6 +17,12 @@ db = firestore.client()
 
 @app.route('/')
 def home():
+    # print(db.collection("courses").document("python-1").get().to_dict())
+    return render_template("index.html")
+
+
+@app.route('/course/lessons/<index>')
+def lesson(index):
     return db.collection("courses").document("python-1").get().to_dict()
 
 
