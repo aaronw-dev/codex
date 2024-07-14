@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import json
 import os
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder="./static")
 app.url_map.strict_slashes = False
 
 creds_dict = json.loads(os.environ.get(
@@ -23,6 +23,11 @@ def home():
 @app.route('/onboarding')
 def onboarding():
     return render_template("onboarding.html")
+
+
+@app.route('/app')
+def renderApp():
+    return render_template("app.html")
 
 
 @app.route('/courses/<course>/<index>')
