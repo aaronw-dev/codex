@@ -46,7 +46,6 @@ async function openLesson() {
         componentDiv.appendChild(continueButton);
 
         componentContainer.appendChild(componentDiv);
-        index++;
     });
 
     let index = 1;
