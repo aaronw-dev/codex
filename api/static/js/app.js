@@ -21,6 +21,8 @@ init()
 
 const lessonPanel = document.getElementById("lesson")
 async function openLesson() {
+    let index = 0;
+    document.getElementById("component-title").innerHTML = lesson.name
     courseInfo.lessons.forEach(element => {
         const componentDiv = document.createElement('div');
         componentDiv.className = 'component';
@@ -48,6 +50,7 @@ async function openLesson() {
         componentDiv.appendChild(continueButton);
 
         componentContainer.appendChild(componentDiv);
+        index++;
     });
     lessonPanel.style.top = "0px"
     lessonPanel.style.zIndex = 100;
