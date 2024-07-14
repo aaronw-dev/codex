@@ -22,7 +22,7 @@ init()
 const lessonPanel = document.getElementById("lesson")
 async function openLesson() {
     let index = 0;
-    document.getElementById("component-title").innerHTML = lesson.name
+    document.getElementById("component-title").innerHTML = courseInfo.name
     courseInfo.lessons.forEach(element => {
         const componentDiv = document.createElement('div');
         componentDiv.className = 'component';
