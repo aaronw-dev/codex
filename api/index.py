@@ -25,7 +25,11 @@ def home():
 def lesson(course, index):
     course_ref = db.collection("courses").document(course)
     course_info = course_ref.get().to_dict()
-    course_info["lessons"] = course_ref.collection(f"lesson-{index}").get()
+    collection_array = []
+    for doc in course_ref.collection(f"lesson-{index}").get():
+        collection_array.append(doc.to_dict())
+    course_info["lessons"] = collection_array
+    print(course_info)
     return course_info
 
 
