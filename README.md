@@ -1,5 +1,5 @@
 # Codex
-
+[View site](https://github.com/aaronw-dev/codex)
 ## Inspiration
 The inspiration for this app came from our own experiences learning to code. Traditional methods often were unengaging, boring and sometimes complex. So we envisioned an educational tool that keeps users engaged and motivated as they progress through their coding journey. We achieved this vision by incorporating elements of gamification coupled with a simple but engaging UI, 
 
